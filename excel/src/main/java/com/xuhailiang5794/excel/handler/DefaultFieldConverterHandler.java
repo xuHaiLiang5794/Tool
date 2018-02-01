@@ -8,6 +8,15 @@ import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
 
+/**
+ * <pre>
+ * 默认的字段转换处理器.
+ * </pre>
+ *
+ * @author hailiang.xu
+ * @version 1.0
+ * @since 2018/2/1 17:15
+ */
 public class DefaultFieldConverterHandler implements FieldConverterHandler {
 	private static final Map<Class<?>, FieldValueConverter> defaultLocalConverterMapper = Collections
 			.synchronizedMap(new HashMap<Class<?>, FieldValueConverter>());

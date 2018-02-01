@@ -1,8 +1,10 @@
 package com.xuhailiang5794.excel.converter;
 
+import com.xuhailiang5794.excel.exception.FieldConverterException;
 import lombok.AllArgsConstructor;
 
 import java.lang.reflect.Field;
+import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
@@ -20,7 +22,11 @@ public class DateFieldConverter extends AbstractFieldValueConverter {
     }
 
     @Override
-    public Object toObject(String source, Field field) throws Exception {
-        return DEFAULT_DATE_FORMAT.parse(source);
+    public Object toObject(String source, Field field) throws FieldConverterException {
+        try {
+            return DEFAULT_DATE_FORMAT.parse(source);
+        } catch (ParseException e) {
+            throw new FieldConverterException(e);
+        }
     }
 }

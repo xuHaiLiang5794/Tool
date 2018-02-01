@@ -1,5 +1,6 @@
 package com.xuhailiang5794.excel.converter;
 
+import com.xuhailiang5794.excel.exception.FieldConverterException;
 import com.xuhailiang5794.excel.handler.DefaultFieldConverterHandler;
 import com.xuhailiang5794.excel.util.StringUtils;
 import lombok.AllArgsConstructor;
@@ -21,7 +22,7 @@ public class ArrayFieldConverter extends AbstractFieldValueConverter {
 	}
 
 	@Override
-	public Object toObject(String source, Field field) throws Exception {
+	public Object toObject(String source, Field field) throws FieldConverterException {
 		if (StringUtils.isBlank(source)) {
 			return null;
 		}

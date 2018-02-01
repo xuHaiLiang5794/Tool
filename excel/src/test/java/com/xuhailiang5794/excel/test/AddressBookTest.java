@@ -9,16 +9,13 @@ import org.junit.Test;
 import java.util.List;
 
 /**
- * 读取excel“通讯录.xlsx”
- * <p>
  * <pre>
- * @author hailiang.xu
- *
- * * Version 	Author	Time		describe
- * ----------------------------------------
- * 1.00		hailiang.xu	2017年10月30日	release
- * ----------------------------------------
+ * 读取excel“通讯录.xlsx”
  * </pre>
+ *
+ * @author hailiang.xu
+ * @version 1.0
+ * @since 2018/2/1 17:15
  */
 public class AddressBookTest {
 
@@ -46,6 +43,15 @@ public class AddressBookTest {
         addressBooks.forEach(addressBook -> {
             System.out.println(addressBook);
         });
+    }
+
+    @Test
+    public void parseBeansToExcel() throws Exception {
+        List<AddressBook> beans = excelHelper.parseExcelToBeans(
+                filename, targetClazz);
+        String filename = "D:\\A-Document\\t.xlsx";
+        Class<AddressBook> targetClazz = AddressBook.class;
+        excelHelper.parseBeansToExcel(beans, filename, targetClazz);
     }
 
 }

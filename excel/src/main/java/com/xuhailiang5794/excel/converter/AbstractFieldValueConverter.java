@@ -4,15 +4,13 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * 实现默认的canConvert方法.
  * <pre>
- * @author hailiang.xu
- *
- * * Version 	Author	Time		describe
- * ----------------------------------------
- * 1.00		hailiang.xu	2017年10月30日	release
- * ----------------------------------------
+ * 实现默认的canConvert方法.
  * </pre>
+ *
+ * @author hailiang.xu
+ * @version 1.0
+ * @since 2018/2/1 17:15
  */
 public abstract class AbstractFieldValueConverter implements FieldValueConverter {
 	protected List<Class<?>> supportClazzs = new ArrayList<Class<?>>();

@@ -1,17 +1,17 @@
 package com.xuhailiang5794.excel.converter;
 
+import com.xuhailiang5794.excel.exception.FieldConverterException;
+
 import java.lang.reflect.Field;
 
 /**
- * Field值转换类.
  * <pre>
- * @author hailiang.xu
- *
- * * Version 	Author	Time		describe
- * ----------------------------------------
- * 1.00		hailiang.xu	2017年10月30日	release
- * ----------------------------------------
+ * Field值转换类.
  * </pre>
+ *
+ * @author hailiang.xu
+ * @version 1.0
+ * @since 2018/2/1 17:15
  */
 public interface FieldValueConverter {
 	
@@ -38,6 +38,6 @@ public interface FieldValueConverter {
 	 * @author hailiang.xu
 	 * @since 2017年10月30日 下午4:01:44
 	 */
-	Object toObject(String source, Field field) throws Exception;
+	Object toObject(String source, Field field) throws FieldConverterException;
 
 }

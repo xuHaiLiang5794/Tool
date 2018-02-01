@@ -1,5 +1,6 @@
 package com.xuhailiang5794.excel.entity;
 
+import com.xuhailiang5794.excel.DataType;
 import com.xuhailiang5794.excel.annotation.CellConfig;
 import com.xuhailiang5794.excel.annotation.TableConfig;
 import lombok.Data;
@@ -7,15 +8,13 @@ import lombok.Data;
 import java.util.Date;
 
 /**
- * 通讯录.xlsx对应的java bean
  * <pre>
- * @author hailiang.xu
- *
- * * Version 	Author	Time		describe
- * ----------------------------------------
- * 1.00		hailiang.xu	2017年10月30日	release
- * ----------------------------------------
+ * 通讯录.xlsx对应的java bean
  * </pre>
+ *
+ * @author hailiang.xu
+ * @version 1.0
+ * @since 2018/2/1 17:15
  */
 @Data// 在编译过程中会自动添加setter等方法
 @TableConfig(startRowNum = 1)// 从第1行开始解析
@@ -47,7 +46,7 @@ public class AddressBook {
     /**
      * 入职时间
      */
-    @CellConfig(index = 5)
+    @CellConfig(index = 5, dataType = DataType.DATE, pattern = "yyyy/MM/dd")
     private Date hiredate;
 
     /**
