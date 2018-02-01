@@ -5,8 +5,8 @@
 ## 组织结构
 ``` lua
 Tool
-|----common（公共模块）
-|----excel（excel处理模块）
+├──── common（公共模块）
+├──── excel（excel处理模块）
 ```
 
 ## 已实现功能
