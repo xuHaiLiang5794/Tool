@@ -3,7 +3,8 @@
 封装一些常用功能，例如excel导入导出等。
 
 ## 已实现功能
-* Excel简单表格解析（xls/xlsx）
+* Excel解析（支持列表解析，xls/xlsx）
+* Excel导出（支持列表导出，xlsx）
 
 ## 技术选型
 > 后台
