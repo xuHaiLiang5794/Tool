@@ -12,11 +12,8 @@ package com.xuhailiang5794.common.util;
 public class StringUtils {
 
 	public static boolean isBlank(String str) {
-		if (str == null || "".equals(str)) {
-			return true;
-		}
-		return false;
-	}
+        return str == null || "".equals(str);
+    }
 
 	public static boolean isNotBlank(String str) {
 		return !isBlank(str);

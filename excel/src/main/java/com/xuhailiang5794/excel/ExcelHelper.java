@@ -317,10 +317,7 @@ public class ExcelHelper<E> {
         if (cellConfig == null) {
             cellConfig = field.getAnnotation(CellConfig.class);
         }
-        if (cellConfig == null) {
-            return false;
-        }
-        return true;
+        return cellConfig != null;
     }
 
     private int getLastCellNum(Row row) {
@@ -509,7 +506,7 @@ public class ExcelHelper<E> {
 
         DataFormatter formatter = new DataFormatter();
         for (; startRowNum <= rowNums; startRowNum++) {
-            E bean = (E) targetClazz.newInstance();
+            E bean = targetClazz.newInstance();
             beans.add(bean);
             rowToBean(sheet.getRow(startRowNum), bean, fields, formatter);
         }
