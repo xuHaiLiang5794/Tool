@@ -30,12 +30,12 @@ public class Swagger2 extends WebMvcConfigurationSupport {
     public Docket docket() {
         ParameterBuilder builder = new ParameterBuilder();
 
-        return new Docket(DocumentationType.SWAGGER_2).apiInfo(apiInfoYunTu()).select()
+        return new Docket(DocumentationType.SWAGGER_2).apiInfo(apiInfo()).select()
                 .apis(RequestHandlerSelectors.basePackage("com.xuhailiang5794"))
                 .apis(RequestHandlerSelectors.withMethodAnnotation(ApiOperation.class)).build();
     }
 
-    private ApiInfo apiInfoYunTu() {
+    private ApiInfo apiInfo() {
         return new ApiInfoBuilder().title("Rest API").version("1.0")
                 .licenseUrl("http://www.apache.org/licenses/LICENSE-2.0.html").license("Apache 2.0")
                 .description("此API为开发人员，测试人员，UI人员提供方便快捷的API开发，测试体验").build();
