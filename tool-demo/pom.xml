@@ -12,10 +12,6 @@
 
     <artifactId>tool-demo</artifactId>
 
-    <properties>
-        <springfox.swagger.version>2.6.1</springfox.swagger.version>
-    </properties>
-
     <dependencies>
         <!--Spring Boot Begin-->
         <dependency>
@@ -35,17 +31,26 @@
             <artifactId>common</artifactId>
             <version>1.0-SNAPSHOT</version>
         </dependency>
+        <dependency>
+            <groupId>com.xuhailiang5794.tool</groupId>
+            <artifactId>excel</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/com.fasterxml.jackson.datatype/jackson-datatype-jsr310 -->
+        <dependency>
+            <groupId>com.fasterxml.jackson.datatype</groupId>
+            <artifactId>jackson-datatype-jsr310</artifactId>
+        </dependency>
 
         <!-- swagger2 生成REST API -->
         <dependency>
             <groupId>io.springfox</groupId>
             <artifactId>springfox-swagger2</artifactId>
-            <version>${springfox.swagger.version}</version>
         </dependency>
         <dependency>
             <groupId>io.springfox</groupId>
             <artifactId>springfox-swagger-ui</artifactId>
-            <version>${springfox.swagger.version}</version>
         </dependency>
     </dependencies>
 
