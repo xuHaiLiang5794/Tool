@@ -28,7 +28,7 @@ import java.util.List;
  * @version 1.0
  * @since 2018/2/2 17:23
  */
-@Api("excel功能演示")
+@Api(value = "excel功能演示", description = "excel功能演示")
 @RestController
 @RequestMapping("excel")
 public class ExcelDemoController {
