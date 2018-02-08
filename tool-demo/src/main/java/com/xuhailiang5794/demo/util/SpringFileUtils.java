@@ -32,7 +32,7 @@ public class SpringFileUtils {
     public static ResponseEntity getResponseEntityByClasspath(
             String classpathFilename, String filename) {
         return getResponseEntity(new ClassPathResource(classpathFilename),
-                System.currentTimeMillis() + ".xlsx");
+                filename);
     }
 
     /**
