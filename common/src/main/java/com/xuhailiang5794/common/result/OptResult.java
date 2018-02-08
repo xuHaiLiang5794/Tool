@@ -3,6 +3,8 @@ package com.xuhailiang5794.common.result;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 
+import java.io.Serializable;
+
 /**
  * <pre>
  * 操作结果集
@@ -13,7 +15,7 @@ import lombok.Data;
  * @since 2018/2/7 10:27
  */
 @Data
-public class OptResult<T> {
+public class OptResult<T> implements Serializable {
 
     /**
      * 数据结果

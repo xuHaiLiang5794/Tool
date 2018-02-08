@@ -5,7 +5,9 @@ import com.xuhailiang5794.excel.DataType;
 import com.xuhailiang5794.excel.annotation.CellConfig;
 import com.xuhailiang5794.excel.annotation.TableConfig;
 import io.swagger.annotations.ApiModelProperty;
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import java.time.LocalDateTime;
 
@@ -20,6 +22,8 @@ import java.time.LocalDateTime;
  */
 @Data// 在编译过程中会自动添加setter等方法
 @TableConfig(startRowNum = 1)// 从第1行开始解析
+@NoArgsConstructor
+@AllArgsConstructor
 public class AddressBook {
     /**
      * 姓名
